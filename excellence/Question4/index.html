@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" language="JavaScript">
+        function Validateform(theForm) {
+            if(theForm.firstname.value === '') {
+                alert ('Fill up your name');
+                return false;
+            }else if (theForm.checkbox.checked == false) {
+                alert ('You didn\'t choose checkbox!');
+                return false;
+            } else {    
+                return true;
+            }
+        }
+        </script> 
+</head>
+<body>
+    <form onsubmit="return Validateform(this)">
+        <input type="text" name="firstname" />
+        <input type="checkbox" name="checkbox" value="check"  />
+        <input type="submit" value="submit" onclick="return Validateform" />
+    </form>
+</body>
+</html>
